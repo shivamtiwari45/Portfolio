@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a0f2c;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #0ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #fff;
+  }
+  
+  #toggle-theme {
+    background: none;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: #0ff;
+    font-size: 1rem;
+  }
+  
+  .section {
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+  }
+  
+  section h2, section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  
+  /* Home Section Styles */
+  .home-section {
+    padding: 6rem 2rem 2rem;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 2rem;
+  }
+  
+  .home-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    padding: 1rem;
+  }
+  
+  .home-image {
+    flex: 1;
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .profile-pic {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0ff;
+    box-shadow: 0 0 20px #0ff;
+  }
+  
+  .skills-container {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .skills-container div {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #0ff;
+    border-radius: 12px;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px #0ff;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .project {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #f0f;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    box-shadow: 0 0 15px #f0f;
+  }
+  
+  .project:hover {
+    transform: scale(1.05);
+  }
+  
+  .project img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .linkedin {
+    background: #0077b5;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 0 10px #0077b5;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #020415;
+    color: white;
+  }
+  
+  /* Full-page scroll behavior */
+  html {
+    scroll-snap-type: y mandatory;
+  }
+  
+  section {
+    scroll-snap-align: start;
+  }
+  
+  /* Neon Animations */
+  @keyframes neonGlow {
+    0%, 100% {
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+    }
+    50% {
+      text-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
+    }
+  }
+  
+  h2, h1 {
+    animation: neonGlow 2s ease-in-out infinite;
+  }
+  
+  /* Dark mode styles */
+  body.dark {
+    background: #020415;
+    color: #f0f0f0;
+  }
+  
+  body.dark header {
+    background-color: rgba(10, 15, 44, 0.9);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .section {
+      padding: 6rem 1rem 1rem;
+    }
+  
+    .skills-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .home-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .home-text {
+      text-align: center;
+    }
+  }
+
+/* Typing Effect */
+.typing {
+  display: inline-block;
+  border-right: 2px solid #0ff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #0ff; }
+}
+
+/* Blinking "Developer" Text */
+.blinking {
+  animation: blinkingText 1.5s infinite;
+}
+
+@keyframes blinkingText {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
