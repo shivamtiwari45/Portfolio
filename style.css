@@ -193,40 +193,43 @@
     animation: neonGlow 2s ease-in-out infinite;
   }
   
-  /* Dark mode styles */
-  body.dark {
-    background: #020415;
-    color: #f0f0f0;
-  }
-  
-  body.dark header {
-    background-color: rgba(10, 15, 44, 0.9);
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-  
-    .section {
-      padding: 6rem 1rem 1rem;
-    }
-  
-    .skills-container {
-      flex-direction: column;
-      gap: 1rem;
-    }
-    
-    .home-container {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .home-text {
-      text-align: center;
-    }
-  }
+  /* Dark mode effect */
+body.dark {
+  background: #000000;
+  color: #ffffff;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.dark header {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark .nav-links a {
+  color: #ffffff;
+}
+
+body.dark #toggle-theme {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+body.dark section h1,
+body.dark section h2,
+body.dark section p {
+  color: #ffffff;
+}
+
+body.dark .skills-container div,
+body.dark .project {
+  background: #111111;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+body.dark .profile-pic {
+  border: 3px solid #ffffff;
+}
+
 
 /* Typing Effect */
 .typing {
@@ -257,4 +260,5 @@
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
+
 
