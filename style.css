@@ -546,7 +546,7 @@ body.dark .profile-pic {
     text-align: center;
   }
 
-  .about-container {
+  .about-container 
     flex-direction: column;
     text-align: center;
   }
@@ -559,3 +559,4 @@ body.dark .profile-pic {
     gap: 2rem;
   }
 }
+
