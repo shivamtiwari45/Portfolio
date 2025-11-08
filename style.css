@@ -127,30 +127,46 @@
   }
   
   .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .project {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid #f0f;
-    padding: 1rem;
-    border-radius: 12px;
-    transition: transform 0.4s ease;
-    box-shadow: 0 0 15px #f0f;
-  }
-  
-  .project:hover {
-    transform: scale(1.05);
-  }
-  
-  .project img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid #0ff;
+  border-radius: 16px;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px #0ff;
+  text-align: center;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #0ff;
+}
+
+.project img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.project h4 {
+  color: #0ff;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+ 
   
   .linkedin {
     background: #0077b5;
@@ -260,3 +276,4 @@ body.dark .profile-pic {
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
+
