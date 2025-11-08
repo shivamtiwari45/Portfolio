@@ -55,16 +55,22 @@
   }
   
   .section {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #0b0c2a;
-}
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+  }
   
-  .section h2 {
-  color: #00ffff;
-  font-size: 2.5rem;
-  text-shadow: 0 0 20px #00ffff;
-  margin-bottom: 40px;
+  section h2, section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
   
   /* Home Section Styles */
   .home-section {
@@ -121,35 +127,30 @@
   }
   
   .project-list {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
   
   .project {
-  background-color: #14163a;
-  border-radius: 15px;
-  box-shadow: 0 0 20px #ff00ff;
-  width: 220px;         /* Equal width for all */
-  height: 220px;        /* Equal height for all */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-
-  .project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 25px #00ffff;
-}
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #f0f;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    box-shadow: 0 0 15px #f0f;
+  }
   
+  .project:hover {
+    transform: scale(1.05);
+  }
   
   .project img {
-  width: 90px;
-  height: 90px;
-  margin-bottom: 10px;
-}
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
   
   .linkedin {
     background: #0077b5;
@@ -259,6 +260,3 @@ body.dark .profile-pic {
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
-
-
-
