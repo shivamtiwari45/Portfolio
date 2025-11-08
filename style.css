@@ -130,40 +130,65 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
+  margin-top: 1rem;
 }
 
+/* Equal-sized and slightly larger project cards */
 .project {
   background-color: rgba(255, 255, 255, 0.05);
-  border: 2px solid #0ff;
-  border-radius: 16px;
-  width: 260px;
-  height: 260px;
+  border: 3px solid #f0f;
+  border-radius: 18px;
+  width: 300px;   /* Increased width */
+  height: 300px;  /* Increased height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 15px #0ff;
   text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 25px #f0f;
 }
 
+/* Neon hover glow */
 .project:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #0ff;
+  transform: scale(1.08);
+  box-shadow: 0 0 40px #f0f;
+  border-color: #0ff;
 }
 
+/* Image size increased slightly for balance */
 .project img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.project:hover img {
+  transform: scale(1.1);
 }
 
 .project h4 {
-  color: #0ff;
-  font-size: 1.2rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin-top: 10px;
+  text-shadow: 0 0 10px #f0f;
+}
+
+/* Responsive: Adjust size on smaller screens */
+@media (max-width: 768px) {
+  .project {
+    width: 85%;
+    height: 260px;
+  }
+
+  .project img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
  
@@ -276,4 +301,5 @@ body.dark .profile-pic {
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
+
 
